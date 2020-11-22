@@ -9,9 +9,8 @@
 
 Создайте файл .env в корне дериктории настройки должны быть следующими:
 
-API_TOKEN = ''
-
-DATABASE_NAME = ''
-DATABASE_USER = ''
-DATABASE_PASSWORD = ''
-DATABASE_HOST = ''
+API_TOKEN = ""  
+DATABASE_NAME = ""  
+DATABASE_USER = ""  
+DATABASE_PASSWORD = ""  
+DATABASE_HOST = ""  
