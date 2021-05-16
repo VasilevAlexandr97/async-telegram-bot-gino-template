@@ -4,7 +4,9 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).resolve().parent
-load_dotenv(dotenv_path=BASE_DIR)
+ENV_PATH = BASE_DIR.joinpath(".env")
+
+load_dotenv(dotenv_path=ENV_PATH)
 
 API_TOKEN = os.getenv("API_TOKEN")
 
@@ -15,7 +17,8 @@ DATABASE = {
     "HOST": os.getenv("DATABASE_HOST"),
 }
 
-# База данных/тип postgresql, mysql
+# База данных тип postgresql, mysql
+
 DATABASE_TYPE = "postgresql"
 DATABASE_STR = ""
 
@@ -24,6 +27,3 @@ if DATABASE_TYPE == "postgresql":
         f"postgresql://{DATABASE['USER']}:{DATABASE['PASSWORD']}"
         f"@{DATABASE['HOST']}/{DATABASE['NAME']}"
     )
-
-
-
